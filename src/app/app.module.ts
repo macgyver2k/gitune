@@ -1,3 +1,4 @@
+import { RepositoryModule } from './repository/repository.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,7 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RepositoryModule,
     StoreModule.forRoot(reducers, {
       metaReducers
     }),
