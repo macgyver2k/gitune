@@ -1,4 +1,4 @@
-query repositoes($path: String!) {
+query repositories($path: String!) {
   repositories(path: $path) {
     path
   }

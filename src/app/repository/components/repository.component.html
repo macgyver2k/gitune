@@ -1,0 +1,22 @@
+<div class="container">
+  <section class="section">
+    <div class="field mg-medium">
+      <div class="control">
+        <input
+          class="input is-primary"
+          type="text"
+          placeholder="Primary input"
+          (input)="updateSearchPath($event.target.value)"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <article class="message" *ngFor="let repository of repositories | async">
+      <div class="message-body">
+        {{ repository.path }}
+      </div>
+    </article>
+  </section>
+</div>

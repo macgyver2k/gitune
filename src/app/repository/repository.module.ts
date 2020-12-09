@@ -4,15 +4,17 @@ import { StoreModule } from '@ngrx/store';
 import * as fromRepository from './reducers/repository.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { RepositoryEffects } from './effects/repository.effects';
-
-
+import { RepositoryComponent } from './components/repository.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [RepositoryComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature(fromRepository.repositoryFeatureKey, fromRepository.reducer),
-    EffectsModule.forFeature([RepositoryEffects])
-  ]
+    StoreModule.forFeature(
+      fromRepository.repositoryFeatureKey,
+      fromRepository.reducer
+    ),
+    EffectsModule.forFeature([RepositoryEffects]),
+  ],
 })
-export class RepositoryModule { }
+export class RepositoryModule {}
