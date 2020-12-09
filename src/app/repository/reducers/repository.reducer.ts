@@ -1,14 +1,16 @@
+import { RepositoesQuery } from './../../../generated/graphql';
 import { Action, createReducer, on } from '@ngrx/store';
 import * as RepositoryActions from '../actions/repository.actions';
 
 export const repositoryFeatureKey = 'repository';
 
 export interface State {
-
+  path?: string;
+  repositories: RepositoesQuery['repositories'];
 }
 
 export const initialState: State = {
-
+  repositories: []
 };
 
 
