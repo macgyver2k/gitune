@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { RepositoryComponent } from './repository/components/repository.component';
-
+import { SearchComponent } from './search/components/search/search.component';
 
 const routes: Routes = [
   {
@@ -11,10 +10,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'repositories',
+        redirectTo: 'search',
         pathMatch: 'full',
       },
-      { path: 'repositories', component: RepositoryComponent }
+      { path: 'search', component: SearchComponent }
     ],
   },
 ];

@@ -2,21 +2,21 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
-import { RepositoryEffects } from './repository.effects';
+import { SearchEffects } from './search.effects';
 
-describe('RepositoryEffects', () => {
+describe('SearchEffects', () => {
   let actions$: Observable<any>;
-  let effects: RepositoryEffects;
+  let effects: SearchEffects;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        RepositoryEffects,
+        SearchEffects,
         provideMockActions(() => actions$)
       ]
     });
 
-    effects = TestBed.inject(RepositoryEffects);
+    effects = TestBed.inject(SearchEffects);
   });
 
   it('should be created', () => {
