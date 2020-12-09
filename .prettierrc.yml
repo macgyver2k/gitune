@@ -1,0 +1,12 @@
+# see .editorconfig file for the following options:
+# - end_of_line
+# - indent_style
+# - indent_size/tab_width
+printWidth: 100
+singleQuote: true
+trailingComma: 'es5'
+bracketSpacing: true
+semi: false
+jsxSingleQuote: false
+jsxBracketSameLine: false
+arrowParens: 'avoid'
