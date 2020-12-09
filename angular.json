@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gitune"
+    }
+  },
+  "defaultProject": "gitune",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
