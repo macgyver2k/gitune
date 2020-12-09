@@ -1,0 +1,18 @@
+query repositoes($path: String!) {
+  repositories(path: $path) {
+    path
+  }
+}
+
+query branches($repository: String!) {
+  branches(repository: $repository) {
+    name
+    fullName
+    commits {
+      sha1
+      authorEmail
+      parents
+      timestamp
+    }
+  }
+}
