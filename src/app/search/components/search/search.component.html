@@ -14,7 +14,7 @@
 
   <section class="section">
     <article class="message" *ngFor="let repository of repositories | async">
-      <div class="message-body">
+      <div class="message-body" (click)="routeTo( repository.path )">
         {{ repository.path }}
       </div>
     </article>

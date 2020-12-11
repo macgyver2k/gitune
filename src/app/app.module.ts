@@ -11,6 +11,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchModule } from './search/search.module';
+import { RepositoryModule } from './repository/repository.module';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +21,7 @@ import { SearchModule } from './search/search.module';
     HttpClientModule,
     AppRoutingModule,
     SearchModule,
+    RepositoryModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
     }),
@@ -28,6 +31,7 @@ import { SearchModule } from './search/search.module';
     }),
     EffectsModule.forRoot([]),
     GraphQLModule,
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
