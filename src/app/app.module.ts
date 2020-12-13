@@ -1,3 +1,4 @@
+import { PlaybackModule } from './playback/playback.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,6 +23,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     AppRoutingModule,
     SearchModule,
     RepositoryModule,
+    PlaybackModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
     }),

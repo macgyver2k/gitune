@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { startPlayback } from 'src/app/playback/actions/playback.actions';
 import { branchCommits, branches } from '../../selectors/repository.selectors';
 
 @Component({
@@ -18,6 +19,10 @@ export class RepositoryComponent implements OnInit {
   constructor( private store: Store ) { }
 
   ngOnInit() {
+  }
+
+  play() {
+    this.store.dispatch( startPlayback() );
   }
 
 }

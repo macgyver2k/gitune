@@ -20,9 +20,22 @@ export const branchCommits = createSelector(
   (state, props) =>
     state.branches
       .find((b) => b.name == props.branch)
-      .commits.filter((c) => state.index[c.sha1].branch === props.branch)
+      .commits.filter((c) => state.commits[c.sha1].branch === props.branch)
       .map((commit) => ({
         commit,
-        index: state.index[commit.sha1].index,
+        index: state.commits[commit.sha1].index,
       }))
+);
+
+export const commitAtIndex = createSelector(
+  selectRepositoryState,
+  (state, props) =>
+    {
+      const commit = state.index[props.index];
+      const branchIndex = state.branches.findIndex( b => b.name == commit.branch );
+      return {
+        commit,
+        branchIndex
+      };
+    }
 );

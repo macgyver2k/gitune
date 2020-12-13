@@ -4,9 +4,10 @@
       <div style="width: 400px; height: 100%; position: absolute; padding: 2px;">
         {{branch.name}}
       </div>
-      <div class="is-primary" style="width: 16px; height: 100%; position: absolute; padding: 1px" [style.left]="(commit.index * 16+400) + 'px'" *ngFor="let commit of getCommits( branch.name) | async; index as index">
+      <div class="is-primary" style="width: 8px; height: 100%; position: absolute; padding: 1px" [style.left]="(commit.index * 4+400) + 'px'" *ngFor="let commit of getCommits( branch.name) | async; index as index">
         <div style="width: 100%; height: 100%; background-color: #ccc"></div>
       </div>
     </div>
   </section>
 </div>
+ <button class="button is-primary" (click)="play()">Primary</button>

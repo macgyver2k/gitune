@@ -8,17 +8,19 @@ export const repositoryFeatureKey = 'repository';
 export interface State {
   path?: string,
   branches: BranchesQuery['branches'],
-  index: {
+  commits: {
     [index:string] : {
       commit: {},
       branch: string
     }
-  }
+  },
+  index: any[]
 }
 
 export const initialState: State = {
 branches: [],
-index: {}
+commits: {},
+index: []
 };
 
 
@@ -38,7 +40,8 @@ export const reducer = createReducer(
   })),
   on(RepositoryActions.commitsIndexedSuccess, (state, action) => ({
     ...state,
-    index: action.commits
+    commits: action.commits,
+    index: action.index
   })),
 );
 

@@ -24,5 +24,5 @@ export const loadBranchesFailure = createAction(
 
 export const commitsIndexedSuccess = createAction(
   '[Repository] Commits Indexed Success',
-  props<{ commits: {} }>()
+  props<{ commits: {}, index: any[] }>()
 );
